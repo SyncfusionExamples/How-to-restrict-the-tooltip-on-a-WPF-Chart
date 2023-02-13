@@ -8,6 +8,7 @@ This is the actual behavior of tooltip rendering over a segment with a pointer p
 ![MainWindow-2023-02-13-10-26-12](https://user-images.githubusercontent.com/105496706/218442257-01ef4449-bf11-4304-a09d-11d90229f929.gif)
 
 The tooltip rendering on the segment has been restricted according to the code snippet below: 
+<br>
 **[C#]**
 ```
 public class ExtLineSeries : LineSeries
