@@ -1,0 +1,44 @@
+﻿<Window x:Class="TooltipDisplayOnlyOnMarkers_WPF_Chart.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TooltipDisplayOnlyOnMarkers_WPF_Chart"
+        xmlns:chart="http://schemas.syncfusion.com/wpf"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid x:Name="grid">
+        <Grid.DataContext>
+            <local:ViewModel />
+        </Grid.DataContext>
+
+        <chart:SfChart Margin="10">
+
+            <chart:SfChart.PrimaryAxis>
+                <chart:CategoryAxis PlotOffset="20" ShowGridLines="False" />
+            </chart:SfChart.PrimaryAxis>
+
+            <chart:SfChart.SecondaryAxis>
+                <chart:NumericalAxis Maximum="120" Minimum="0" ShowGridLines="False" PlotOffset="12"/>
+            </chart:SfChart.SecondaryAxis>
+
+            <chart:SfChart.Behaviors>
+                <chart:ChartTooltipBehavior Position="Pointer"/>
+            </chart:SfChart.Behaviors>
+
+            <local:ExtLineSeries ItemsSource="{Binding Data}"
+                                 XBindingPath="XValue"
+                                 YBindingPath="YValue"
+                                 ShowTooltip="True"
+                                 Palette="Metro">
+                <local:ExtLineSeries.AdornmentsInfo>
+                    <chart:ChartAdornmentInfo ShowLabel="True" 
+                                              Background="Transparent" 
+                                              SymbolHeight="40"  SymbolInterior="White"
+                                              SymbolWidth="40" Symbol="Ellipse" 
+                                              SymbolStroke="Black"  ShowMarker="True" />
+                </local:ExtLineSeries.AdornmentsInfo>
+            </local:ExtLineSeries>
+        </chart:SfChart>
+    </Grid>
+</Window>
