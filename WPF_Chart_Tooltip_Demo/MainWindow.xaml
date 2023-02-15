@@ -6,11 +6,11 @@
         xmlns:local="clr-namespace:WPF_Chart_Tooltip_Demo"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800"
-        xmlns:chart="http://schemas.syncfusion.com/wpf">
-    
+        xmlns:chart="clr-namespace:Syncfusion.UI.Xaml.Charts;assembly=Syncfusion.SfChart.WPF">
+
     <Grid x:Name="grid">
         <Grid.DataContext>
-            <local:ViewModel />
+            <local:ViewModel/>
         </Grid.DataContext>
 
         <chart:SfChart Margin="10">
