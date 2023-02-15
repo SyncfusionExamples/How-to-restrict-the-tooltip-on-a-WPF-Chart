@@ -11,7 +11,7 @@ The tooltip rendering on the segment has been restricted according to the code s
 
 **[C#]**
 ```
-public class ExtLineSeries : LineSeries
+public class LineSeriesExt : LineSeries
 {
 	protected override void OnMouseMove(MouseEventArgs e)
 	{
@@ -37,18 +37,18 @@ public class ExtLineSeries : LineSeries
         <chart:ChartTooltipBehavior Position="Pointer"/>
     </chart:SfChart.Behaviors>
 
-    <local:ExtLineSeries ItemsSource="{Binding Data}"
+    <local:LineSeriesExt ItemsSource="{Binding Data}"
                          XBindingPath="XValue"
                          YBindingPath="YValue"
                          ShowTooltip="True"
                          Palette="Metro">
-        <local:ExtLineSeries.AdornmentsInfo>
+        <local:LineSeriesExt.AdornmentsInfo>
             <chart:ChartAdornmentInfo ShowLabel="True" Background="Transparent" 
                                       SymbolHeight="40" SymbolInterior="White"
                                       SymbolWidth="40" Symbol="Ellipse" 
                                       SymbolStroke="Black" ShowMarker="True" />
-        </local:ExtLineSeries.AdornmentsInfo>
-    </local:ExtLineSeries>
+        </local:LineSeriesExt.AdornmentsInfo>
+    </local:LineSeriesExt>
 </chart:SfChart>
 ```
 ![MainWindow-2023-02-13-10-33-56](https://user-images.githubusercontent.com/105496706/218442232-1de8fd3c-8c86-41bf-91fe-43c85ea0891e.gif)
