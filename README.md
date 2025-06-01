@@ -59,7 +59,7 @@ public class LineSeriesExt : LineSeries
 
 If you are facing a path too long exception when building this example project, close Visual Studio and rename the repository to a shorter name before building the project.
 
-For more details, refer to the KB on [How to restrict the tooltip on a WPF Chart?](https://support.syncfusion.com/kb/article/12326/how-to-restrict-the-tooltip-on-a-wpf-chart).
+For more details, refer to the KB on [how to restrict the tooltip on a WPF Chart](https://support.syncfusion.com/kb/article/12326/how-to-restrict-the-tooltip-on-a-wpf-chart).
 
 **See Also,**
 <br>[How to provide animation effects for tooltip?](https://help.syncfusion.com/wpf/charts/interactive-features/tooltip#animation-for-tooltip)
